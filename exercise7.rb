@@ -10,7 +10,7 @@ def display_cohort(students)
 	end
 end
 
-puts "Here are all the cohorts:"
+puts "Here are all the cohorts and their respective number of students:"
 
 display_cohort(students)
 
