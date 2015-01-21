@@ -2,6 +2,7 @@
 
 grocery_list = ["eggs", "pies", "avocados", "milk", "salmon"] 
 
+puts "Here is my first grocery list:"
 
 def print_list(grocery_list)
 
@@ -16,12 +17,14 @@ grocery_list << "rice"
 print_list(grocery_list)
 
 if grocery_list.include?("bananas")
-	puts "You don't need to pick up bananas today."
+	puts "It's all good. You don't need to pick up bananas today."
 else
-	puts "You need to pick up bananas."
+	puts "Damn, girl. You need to pick up bananas."
 end
 
 puts "The second item in my list is: #{grocery_list[1]}"
+
+grocery_list << "bananas"
 
 puts "Here is my new, sorted list:" + "\n* " + grocery_list.sort.join("\n* ")
 
