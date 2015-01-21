@@ -19,14 +19,15 @@ students[:cohort4] = 43
 puts "Here are just the cohorts:"
 puts students.keys
 
+
 def increase_by5(students)
-	students.each_value do |count|
-		puts (count * 1.05).to_i 
+	students.values.map do |count|
+		(count * 1.05).to_i 
 	end
 end
 
-puts "The number of students for each cohort if we increased admissions by 5%:"
-increase_by5(students)
+puts "The number of students for each cohort if we increased admissions by 5%:
+#{increase_by5(students)}."
 
 students.delete(:cohort2)
 
