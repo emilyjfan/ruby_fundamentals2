@@ -4,9 +4,9 @@ grocery_list = ["eggs", "pies", "avocados", "milk", "salmon"]
 
 puts "Here is my first grocery list:"
 
-def print_list(grocery_list)
-#puts "* " << grocery_list.join("\n* ")
-	grocery_list.each { |item| puts "* " + item }
+def print_list(list)
+#puts "* " << list.join("\n* ")
+	list.each { |item| puts "* #{item}" }
 end 
 
 print_list(grocery_list)
@@ -27,8 +27,12 @@ puts "The second item in my list is: #{grocery_list[1]}"
 
 grocery_list << "bananas"
 
-puts "Here is my new, sorted list:" + "\n* " + grocery_list.sort.join("\n* ")
+puts "Here is my new, sorted list:" 
+
+print_list(grocery_list.sort)
 
 grocery_list.delete("salmon")
 #displaying list without salmon
-puts "Forget the salmon! Here is my new list:" "\n* " + grocery_list.sort.join("\n* ")
+puts "Forget the salmon! Here is my new list:"
+
+print_list(grocery_list.sort)	
