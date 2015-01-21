@@ -5,14 +5,15 @@ grocery_list = ["eggs", "pies", "avocados", "milk", "salmon"]
 puts "Here is my first grocery list:"
 
 def print_list(grocery_list)
-
 #puts "* " << grocery_list.join("\n* ")
-	grocery_list.each do |item|
-		puts "* " + item 
-	end 
+	grocery_list.each { |item| puts "* " + item }
 end 
 
+print_list(grocery_list)
+
 grocery_list << "rice"
+
+puts "Here is my updated grocery list, including rice:"
 
 print_list(grocery_list)
 
